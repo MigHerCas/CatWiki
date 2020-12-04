@@ -10,15 +10,19 @@
     "esModuleInterop": true,
     "forceConsistentCasingInFileNames": true,
     "isolatedModules": true,
-    "jsx": "react",
-    "lib": ["dom", "DOM.Iterable", "es2017"],
+    "jsx": "react-jsx",
+    "lib": [
+      "dom",
+      "DOM.Iterable",
+      "es2017"
+    ],
     "moduleResolution": "node",
     "noImplicitReturns": true,
     "noImplicitThis": true,
     "noImplicitAny": true,
     "strictNullChecks": true,
     "noFallthroughCasesInSwitch": true,
-    "noUnusedLocals": true,
+    "noUnusedLocals": false,
     "noUnusedParameters": true,
     "resolveJsonModule": true,
     "skipLibCheck": true,
@@ -26,6 +30,13 @@
     "target": "esnext",
     "noEmit": true
   },
-  "exclude": ["node_modules", "build"],
-  "include": ["src/**/*", "**/*.js", "**/*.ts", "**/*.tsx", "include"]
+  "exclude": [
+    "node_modules",
+    "build"
+  ],
+  "include": [
+    "**/*.js",
+    "**/*.ts",
+    "**/*.tsx"
+  ]
 }

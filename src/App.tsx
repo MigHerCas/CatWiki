@@ -1,24 +1,20 @@
 import React from 'react';
-import logo from './logo.svg';
+import useFetchBreeds from './hooks/useFetchBreeds';
 
-function App() {
+function App(): JSX.Element {
+  const { breeds, isLoading, isError } = useFetchBreeds();
+
+  if (breeds.length) {
+    console.log(breeds);
+  }
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.tsx</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <>
+      <div className="App">
+        {isLoading && <p>Loading...</p>}
+        {isError && <p>Error!</p>}
+        {breeds && breeds.map(({ id, name }) => <p key={id}>{name}</p>)}
+      </div>
+    </>
   );
 }
 

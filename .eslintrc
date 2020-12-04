@@ -26,6 +26,7 @@
   "rules": {
     "linebreak-style": "off",
     "no-debugger": "off",
+    "no-console": "off",
     "no-multiple-empty-lines": "error",
     "prettier/prettier": [
       "error",
