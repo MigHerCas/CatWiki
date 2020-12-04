@@ -8,7 +8,7 @@ type HookReturns = {
   isLoading: boolean;
 };
 
-const useFetchBreeds = (): HookReturns => {
+const useFetch = (): HookReturns => {
   const [breeds, setBreeds] = useState<Breed[]>([]);
   const [isLoading, setIsLoading] = useState<boolean>(false);
   const [isError, setIsError] = useState<boolean>(false);
@@ -40,4 +40,4 @@ const useFetchBreeds = (): HookReturns => {
   return { breeds, isError, isLoading };
 };
 
-export default useFetchBreeds;
+export default useFetch;

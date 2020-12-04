@@ -12,7 +12,7 @@ interface Props {
   query: string;
 }
 
-const useSearchBreeds = ({ searchRef, query }: Props): HookReturns => {
+const useSearch = ({ searchRef, query }: Props): HookReturns => {
   const [searchedBreeds, setSearchedBreeds] = useState<Breed[]>([]);
   const [searchIsLoading, setSearchIsLoading] = useState<boolean>(false);
 
@@ -30,34 +30,28 @@ const useSearchBreeds = ({ searchRef, query }: Props): HookReturns => {
   }, [searchRef]);
 
   useEffect(() => {
-    let currentQuery = true;
+    // let currentQuery = true;
 
     const loadBreeds = async () => {
       if (!query) return setSearchedBreeds([]);
       await sleep(200);
 
-      if (currentQuery) {
-        try {
-          setSearchIsLoading(true);
-          const loadedBreeds = await searchBreeds(query);
-          setSearchedBreeds(loadedBreeds);
-          setSearchIsLoading(false);
-        } catch (err) {
-          throw new Error(err);
-        }
+      try {
+        setSearchIsLoading(true);
+        const loadedBreeds = await searchBreeds(query);
+        setSearchedBreeds(loadedBreeds);
+        setSearchIsLoading(false);
+      } catch (err) {
+        throw new Error(err);
       }
 
       return loadBreeds;
     };
 
     loadBreeds();
-
-    return () => {
-      currentQuery = false;
-    };
   }, [query]);
 
   return { searchedBreeds, searchIsLoading };
 };
 
-export default useSearchBreeds;
+export default useSearch;

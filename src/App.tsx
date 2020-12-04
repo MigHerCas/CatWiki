@@ -1,12 +1,12 @@
 import React, { createRef, useState } from 'react';
-import useFetchBreeds from './hooks/useFetchBreeds';
-import useSearchBreeds from './hooks/useSearchBreeds';
+import useFetch from './hooks/useFetchBreeds';
+import useSearch from './hooks/useSearch';
 
 function App(): JSX.Element {
   const searchRef = createRef<HTMLInputElement>();
   const [query, setQuery] = useState<string>('');
-  const { breeds, isLoading, isError } = useFetchBreeds();
-  const { searchedBreeds, searchIsLoading } = useSearchBreeds({
+  const { breeds, isLoading, isError } = useFetch();
+  const { searchedBreeds, searchIsLoading } = useSearch({
     searchRef,
     query,
   });
