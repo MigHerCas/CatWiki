@@ -1,0 +1,73 @@
+h1 {
+  font-size: 4.8rem;
+  font-weight: $w-bold;
+  line-height: 1.22; // 58.51px
+}
+
+h2 {
+  font-size: 3.6rem;
+  font-weight: $w-bold;
+  line-height: 1.22; // 44px
+}
+
+h3 {
+  font-size: 3.6rem;
+  font-weight: $w-semibold;
+  line-height: 1.22; // 44px
+}
+
+// Category headline
+h4 {
+  font-size: 1.8rem;
+  font-weight: $w-normal;
+  line-height: 1.22; // 22px
+}
+
+figure {
+  font-weight: $w-semibold;
+  font-size: 1.8rem;
+  line-height: 1.22; // 22px
+}
+
+.quote {
+  font-weight: $w-normal;
+  font-size: 2.4rem;
+  line-height: 1.25; // 30px
+}
+
+p {
+  font-weight: $w-normal;
+  font-size: 1.8rem;
+  line-height: 1.22; // 22px;
+}
+
+small {
+  font-weight: $w-regular;
+  font-size: 1.8rem;
+  line-height: 1.22; // 22px
+}
+
+strong {
+  font-weight: $w-bold;
+  font-size: 1.6rem;
+  line-height: 1.25; // 20px
+}
+
+span {
+  @extend strong;
+  font-weight: $w-normal;
+}
+
+a.arrow-link {
+  font-weight: $w-bold;
+  font-size: 1.8rem;
+  line-height: 1.22; // 22px
+  color: $color-lightBrown;
+  text-transform: uppercase;
+}
+
+input {
+  font-weight: $w-normal;
+  font-size: 1.8rem;
+  line-height: 1.22; // 22px
+}
