@@ -1,0 +1,9 @@
+.App {
+  padding: 10rem;
+}
+
+.grid {
+  grid-template-columns: repeat(12, 1fr);
+  max-width: 124.8rem;
+  margin: 0 auto;
+}
