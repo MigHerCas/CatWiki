@@ -1,4 +1,5 @@
 import React from 'react';
+import { ReactComponent as Logo } from '../assets/icons/CatwikiLogo.svg';
 import Loading from '../components/Loading';
 import Error from '../components/Error';
 import useFetch from '../hooks/useFetchBreeds';
@@ -19,7 +20,9 @@ export default function HomeScreen(): JSX.Element {
   return (
     <>
       <div className="App">
-        <header>Absolute Header</header>
+        <header>
+          <Logo />
+        </header>
         <main>
           Main wrapper
           <div>Hero</div>
