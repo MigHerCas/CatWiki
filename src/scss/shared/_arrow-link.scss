@@ -1,0 +1,8 @@
+.arrow-link {
+  text-decoration: none;
+
+  &:link,
+  &:visited {
+    color: rgba(41, 21, 7, 0.6);
+  }
+}
