@@ -1,14 +1,14 @@
 import React from 'react';
 import { BrowserRouter as Router, Route, Switch } from 'react-router-dom';
-import BreedScreen from '../screens/BreedScreen';
-import HomeScreen from '../screens/HomeScreen';
+import BreedLayout from '../layouts/BreedLayout';
+import HomeLayout from '../layouts/HomeLayout';
 
 export default function Routes(): JSX.Element {
   return (
     <Router>
       <Switch>
-        <Route exact path="/breed" component={BreedScreen} />
-        <Route exact path="/" component={HomeScreen} />
+        <Route exact path="/breed" component={BreedLayout} />
+        <Route exact path="/" component={HomeLayout} />
       </Switch>
     </Router>
   );

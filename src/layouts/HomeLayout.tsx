@@ -19,21 +19,16 @@ export default function HomeScreen(): JSX.Element {
 
   return (
     <>
-      <div className="App">
-        <header>
-          <Logo />
-        </header>
-        <main>
-          Main wrapper
-          <div>Hero</div>
-          <div>Most searched</div>
-        </main>
+      <main>
+        Main wrapper
+        <div>Hero</div>
+        <div>Most searched</div>
+      </main>
 
-        <footer>
-          <div>SubFooter</div>
-          <div>Absolute footer</div>
-        </footer>
-      </div>
+      <footer>
+        <div>SubFooter</div>
+        <div>Absolute footer</div>
+      </footer>
     </>
   );
 }
