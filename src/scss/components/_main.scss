@@ -1,0 +1,107 @@
+.main-content {
+}
+
+.main-content > .hero {
+  display: flex;
+  align-items: center;
+  min-height: 45rem;
+  background-image: url("../../assets/images/HeroImagelg.png");
+  background-position: center;
+  background-size: cover;
+  border-radius: $radius $radius 0 0;
+
+  .hero-content {
+    width: 30%;
+    color: $color-white;
+  }
+
+  .hero__logo {
+    width: 25rem;
+    height: auto;
+
+    g {
+      fill: $color-white;
+    }
+  }
+
+  .quote {
+    margin-bottom: 3.5rem;
+  }
+
+  .search-input {
+    display: inline-block;
+    width: 100%;
+    border: 0;
+    padding: 2rem 2.8rem;
+    border-radius: 42px;
+
+    &::placeholder {
+      color: $color-primary;
+    }
+  }
+}
+
+.main-content > .most-searched {
+  display: flex;
+  flex-wrap: wrap;
+  background-color: $color-beige;
+  padding-top: 5rem;
+  padding-bottom: 5rem;
+  border-radius: 0 0 $radius $radius;
+
+  .most-searched__title-row {
+    position: relative;
+    flex-basis: 100%;
+    margin: 2.5rem 0 4rem;
+  }
+
+  .most-searched__title {
+    width: 45%;
+  }
+
+  .most-searched__cta {
+    position: absolute;
+    right: 0;
+    bottom: 0;
+  }
+  .most-searched__list {
+    display: flex;
+    gap: 5rem;
+  }
+  .most-searched__card {
+    a {
+      position: relative;
+    }
+
+    a::before {
+      content: "";
+      position: absolute;
+      top: 3rem;
+      transform: translateX(0%);
+      height: 17rem;
+      width: 4rem;
+      background-color: $color-golden;
+      border-radius: 14px;
+      transition: transform 250ms ease-in-out;
+      will-change: transform;
+    }
+
+    a:hover::before {
+      transform: translateX(-50%);
+    }
+
+    figure {
+    }
+
+    figcaption {
+    }
+
+    img {
+      width: 22rem;
+      height: 22rem;
+      border-radius: $radius;
+      object-fit: cover;
+      margin-bottom: 1rem;
+    }
+  }
+}
