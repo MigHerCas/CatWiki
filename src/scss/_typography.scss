@@ -18,9 +18,21 @@ h3 {
 
 // Category headline
 h4 {
+  position: relative;
   font-size: 1.8rem;
   font-weight: $w-normal;
   line-height: 1.22; // 22px
+
+  &::after {
+    content: "";
+    position: absolute;
+    bottom: -1rem;
+    left: 0;
+    height: 3px;
+    width: 6rem;
+    background-color: $color-brown;
+    border-radius: 10px;
+  }
 }
 
 figure {
@@ -31,7 +43,7 @@ figure {
 
 .quote {
   font-weight: $w-normal;
-  font-size: 2.4rem;
+  font-size: 2rem;
   line-height: 1.25; // 30px
 }
 
@@ -62,7 +74,6 @@ a.arrow-link {
   font-weight: $w-bold;
   font-size: 1.8rem;
   line-height: 1.22; // 22px
-  color: $color-lightBrown;
   text-transform: uppercase;
 }
 
