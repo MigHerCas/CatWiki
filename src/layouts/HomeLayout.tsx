@@ -18,7 +18,7 @@ export default function HomeScreen(): JSX.Element {
 
   return (
     <>
-      <main>
+      <main className="wrapper">
         Main wrapper
         <div>Hero</div>
         <article className="most-searched">Most searched</article>

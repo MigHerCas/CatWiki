@@ -1,14 +1,14 @@
 .App {
-  padding: 5rem;
-
-  @media (min-width: 1200px) {
-    padding: 10rem;
-  }
+  padding: 10.8rem 0;
 }
 
-.grid {
-  display: grid;
-  grid-template-columns: repeat(12, 1fr);
-  max-width: 108rem;
+.App,
+.App > * {
+  max-width: 124.8rem;
   margin: 0 auto;
+}
+
+.wrapper {
+  padding-right: 10.8rem;
+  padding-left: 10.8rem;
 }
