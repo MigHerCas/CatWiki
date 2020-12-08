@@ -22,13 +22,9 @@ export default function HomeScreen(): JSX.Element {
       <main>
         Main wrapper
         <div>Hero</div>
-        <div>Most searched</div>
+        <article className="most-searched">Most searched</article>
+        <article className="info-article" />
       </main>
-
-      <footer>
-        <div>SubFooter</div>
-        <div>Absolute footer</div>
-      </footer>
     </>
   );
 }
