@@ -1,5 +1,4 @@
 import React from 'react';
-import { ReactComponent as Logo } from '../assets/icons/CatwikiLogo.svg';
 import Loading from '../components/Loading';
 import Error from '../components/Error';
 import useFetch from '../hooks/useFetchBreeds';
