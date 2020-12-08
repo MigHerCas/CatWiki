@@ -103,8 +103,8 @@ export default function HomeScreen(): JSX.Element {
           <div className="right-column">
             <figure className="photo-composition">
               <img src={CatPic2} alt="CatPic" />
-              <img src={CatPic1} alt="CatPic" />
               <img src={CatPic3} alt="CatPic" />
+              <img src={CatPic1} alt="CatPic" />
             </figure>
           </div>
         </section>
