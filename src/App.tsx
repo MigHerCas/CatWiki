@@ -5,7 +5,7 @@ import Routes from './routes/routes';
 
 function App(): JSX.Element {
   return (
-    <div className="App grid">
+    <div className="App">
       <Header />
       <Routes />
       <Footer />
