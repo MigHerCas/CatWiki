@@ -1,8 +1,25 @@
 .arrow-link {
+  display: flex;
+  align-items: center;
   text-decoration: none;
 
   &:link,
   &:visited {
     color: rgba(41, 21, 7, 0.6);
+  }
+
+  &:hover {
+    text-decoration: underline;
+
+    .material-icons {
+      transform: translateX(5px);
+    }
+  }
+
+  .material-icons {
+    margin-left: 5px;
+    transform: translateX(0);
+    transition: transform 150ms ease-in-out;
+    will-change: transform;
   }
 }

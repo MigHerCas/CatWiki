@@ -47,6 +47,7 @@ export default function HomeScreen(): JSX.Element {
             </h1>
             <a href="/breed" className="most-searched__cta arrow-link">
               See more
+              <span className="material-icons">arrow_right_alt</span>
             </a>
           </div>
           <ul className="most-searched__list">
@@ -84,7 +85,29 @@ export default function HomeScreen(): JSX.Element {
             </li>
           </ul>
         </section>
-        <article className="info-article" />
+        <section className="info-article wrapper">
+          <div className="left-column">
+            <h1 className="info-article__title overline">
+              Why should you have a cat?
+            </h1>
+            <p className="info-article__text">
+              Having a cat around you can actually trigger the release of
+              calming chemicals in your body which lower your stress and anxiety
+              leves
+            </p>
+            <a href="/breed" className="info-article__cta arrow-link">
+              Read more
+              <span className="material-icons">arrow_right_alt</span>
+            </a>
+          </div>
+          <div className="right-column">
+            <figure className="photo-composition">
+              <img src={CatPic2} alt="CatPic" />
+              <img src={CatPic1} alt="CatPic" />
+              <img src={CatPic3} alt="CatPic" />
+            </figure>
+          </div>
+        </section>
       </main>
     </>
   );
