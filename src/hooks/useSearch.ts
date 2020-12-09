@@ -3,7 +3,7 @@ import apiService from '../api/apiService';
 import { Breed } from '../models/schema';
 
 type HookReturns = {
-  searchedBreeds: Breed[];
+  searchedResults: Array<Breed>;
   searchIsLoading: boolean;
 };
 
@@ -13,7 +13,7 @@ interface Props {
 }
 
 const useSearch = ({ searchRef, query }: Props): HookReturns => {
-  const [searchedBreeds, setSearchedBreeds] = useState<Breed[]>([]);
+  const [searchedResults, setSearchedResults] = useState<Breed[]>([]);
   const [searchIsLoading, setSearchIsLoading] = useState<boolean>(false);
 
   const sleep = (ms: number) => {
@@ -33,13 +33,13 @@ const useSearch = ({ searchRef, query }: Props): HookReturns => {
     // let currentQuery = true;
 
     const loadBreeds = async () => {
-      if (!query) return setSearchedBreeds([]);
+      if (!query) return setSearchedResults([]);
       await sleep(200);
 
       try {
         setSearchIsLoading(true);
         const loadedBreeds = await searchBreeds(query);
-        setSearchedBreeds(loadedBreeds);
+        setSearchedResults(loadedBreeds);
         setSearchIsLoading(false);
       } catch (err) {
         throw new Error(err);
@@ -51,7 +51,7 @@ const useSearch = ({ searchRef, query }: Props): HookReturns => {
     loadBreeds();
   }, [query]);
 
-  return { searchedBreeds, searchIsLoading };
+  return { searchedResults, searchIsLoading };
 };
 
 export default useSearch;

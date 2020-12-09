@@ -1,25 +1,20 @@
 import React from 'react';
-import Loading from '../components/Loading';
-import Error from '../components/Error';
-import useFetch from '../hooks/useFetchBreeds';
-
 import { ReactComponent as CatwikiLogo } from '../assets/icons/CatwikiLogo.svg';
 import CatPic1 from '../assets/images/image 1.png';
 import CatPic2 from '../assets/images/image 2.png';
 import CatPic3 from '../assets/images/image 3.png';
+import SearchComponent from '../components/SearchComponent';
 
 export default function HomeScreen(): JSX.Element {
-  const { breeds, isLoading, isError } = useFetch();
+  // const { breeds, isLoading, isError } = useFetch();
 
-  console.log(breeds);
+  // if (isLoading) {
+  //   return <Loading />;
+  // }
 
-  if (isLoading) {
-    return <Loading />;
-  }
-
-  if (isError) {
-    return <Error />;
-  }
+  // if (isError) {
+  //   return <Error />;
+  // }
 
   return (
     <>
@@ -28,15 +23,7 @@ export default function HomeScreen(): JSX.Element {
           <div className="hero-content">
             <CatwikiLogo className="hero__logo" />
             <p className="quote">Get to know more about your cat breed</p>
-            <form>
-              <input
-                type="text"
-                name="search"
-                placeholder="Enter your breed"
-                id="search"
-                className="search-input"
-              />
-            </form>
+            <SearchComponent />
           </div>
         </section>
         <section className="most-searched wrapper">
