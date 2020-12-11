@@ -1,15 +1,16 @@
 import React from 'react';
 import MainCatPic from '../assets/images/cat5.jpg';
+import LazyImage from '../utils/LazyImage';
 
 export default function BreedDetails(): JSX.Element {
   return (
     <section className="breed-details">
       <div className="left-column">
         <div className="breed-details__image-wrapper">
-          <img
+          <LazyImage
+            className="breed-details__image radius"
             src={MainCatPic}
             alt="Cat pic"
-            className="breed-details__image radius"
           />
         </div>
       </div>
@@ -62,7 +63,7 @@ export default function BreedDetails(): JSX.Element {
                   <span className="breed-details__stat-cell" />
                 </td>
               </tr>
-              <tr className="spacer">spacer</tr>
+              <tr className="spacer" />
               <tr>
                 <th>
                   <strong>Adaptability: </strong>
@@ -83,7 +84,7 @@ export default function BreedDetails(): JSX.Element {
                   <span className="breed-details__stat-cell" />
                 </td>
               </tr>
-              <tr className="spacer">spacer</tr>
+              <tr className="spacer" />
               <tr>
                 <th>
                   <strong>Adaptability: </strong>
@@ -104,7 +105,7 @@ export default function BreedDetails(): JSX.Element {
                   <span className="breed-details__stat-cell" />
                 </td>
               </tr>
-              <tr className="spacer">spacer</tr>
+              <tr className="spacer" />
               <tr>
                 <th>
                   <strong>Affection level:</strong>
