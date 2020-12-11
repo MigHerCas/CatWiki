@@ -1,12 +1,16 @@
 import React from 'react';
-import CatPic1 from '../assets/images/image 1.png';
+import MainCatPic from '../assets/images/cat5.jpg';
 
 export default function BreedDetails(): JSX.Element {
   return (
     <section className="breed-details">
       <div className="left-column">
         <div className="breed-details__image-wrapper">
-          <img src={CatPic1} alt="Cat pic" className="breed-details__image" />
+          <img
+            src={MainCatPic}
+            alt="Cat pic"
+            className="breed-details__image radius"
+          />
         </div>
       </div>
       <div className="right-column">
