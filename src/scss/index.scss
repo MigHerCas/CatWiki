@@ -12,11 +12,12 @@
 
 // Layout
 @import "./layout/grid";
+@import "./layout/homePage";
+@import "./layout/detailPage";
 
 // Shared
 @import "./shared/arrow-link";
 
 // Components
 @import "./components/header";
-@import "./components/main";
 @import "./components/footer";

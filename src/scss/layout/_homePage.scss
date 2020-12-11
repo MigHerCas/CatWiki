@@ -1,7 +1,4 @@
-.main-content {
-}
-
-.main-content > .hero {
+.hero {
   display: flex;
   align-items: center;
   min-height: 45rem;
@@ -41,7 +38,7 @@
   }
 }
 
-.main-content > .most-searched {
+.most-searched {
   display: flex;
   flex-wrap: wrap;
   background-color: $color-beige;
@@ -114,7 +111,7 @@
   }
 }
 
-.main-content > .info-article {
+.info-article {
   display: flex;
   align-items: center;
   margin-bottom: 10rem;
