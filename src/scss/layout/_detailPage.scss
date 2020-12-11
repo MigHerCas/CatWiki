@@ -1,0 +1,67 @@
+.breed-details {
+  display: flex;
+  align-content: flex-start;
+  gap: 11.5rem;
+
+  .left-column {
+    margin-left: 5.2rem;
+  }
+
+  .right-column {
+    width: 42vw;
+  }
+}
+
+.breed-details__title {
+  margin-bottom: 2.5rem;
+}
+.breed-details__description {
+  margin-bottom: 3.275rem;
+}
+
+.breed-details__features-row {
+  display: flex;
+  margin-bottom: 2rem;
+
+  strong {
+    margin-right: 0.4rem;
+  }
+
+  span:not(:last-child) {
+    margin-right: 0.4rem;
+  }
+}
+
+.breed-details__stats-table {
+  tr {
+    padding-bottom: 2rem;
+  }
+
+  tr.spacer {
+    visibility: hidden;
+  }
+
+  td {
+    padding-right: 0.85rem;
+  }
+
+  th {
+    text-align: left;
+    padding-right: 3rem;
+  }
+}
+
+.breed-details__stat-cell {
+  display: inline-block;
+  width: 6rem;
+  height: 1.2rem;
+  background: $color-brown;
+  border-radius: 8px;
+  vertical-align: middle;
+  background-color: $color-lightGrey;
+}
+
+// Active state
+.breed-details__stat-cell--filled {
+  background-color: $color-brown;
+}
